@@ -33,3 +33,41 @@ content-type: application/json
 ### DELETE temple
 DELETE http://localhost:1001/temples/65b4f58e59aa3d206d8b651f HTTP/1.1
 
+// Production
+
+### Get all temples
+GET https://jucinaldoduarte-cse-341-project-2.onrender.com:1001/temples
+
+
+### Get temple by id
+GET https://jucinaldoduarte-cse-341-project-2.onrender.com/temples/65b4f58e59aa3d206d8b651f
+
+
+### Create temple
+POST https://jucinaldoduarte-cse-341-project-2.onrender.com/temples HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Nauvoo Temple",
+    "status":"Destroyed",
+    "location":"Nauvoo",
+    "dedication":"05/01/1846"
+}
+
+
+### PUT temple
+PUT https://jucinaldoduarte-cse-341-project-2.onrender.com/temple HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Nauvoo Temple",
+    "status": "Destroyed",
+    "location": "Nauvo",
+    "dedication": "05/01/1846"  
+}
+
+### DELETE temple
+DELETE https://jucinaldoduarte-cse-341-project-2.onrender.com/temples/65b4f58e59aa3d206d8b651f HTTP/1.1
+
+
+
