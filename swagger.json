@@ -7,9 +7,7 @@
   },
   "host": "jucinaldoduarte-cse-341-project-2.onrender.com:1001",
   "basePath": "/",
-  "schemes": [
-    "https, http"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/api-docs": {
       "get": {
