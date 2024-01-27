@@ -1,0 +1,12 @@
+{
+  "temple": {
+    "name": "Nauvoo Temple",
+    "status": "Destroyed",
+    "location": "Nauvoo",
+    "dedication": "05/01/1846"
+  },  
+    "name": "Apia Samoa Temple",
+    "status": "Destroyed",
+    "location": "Samoa",
+    "dedication": "08/05/1883"  
+}
