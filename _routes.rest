@@ -1,0 +1,77 @@
+// LOCALHOST
+### Get all temples
+GET http://localhost:1001/temples
+
+
+### Get temple by id
+GET http://localhost:1001/temples/65b4f58e59aa3d206d8b651f
+
+
+### Create temple
+POST http://localhost:1001/temples HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Nauvoo Temple",
+    "status":"Destroyed",
+    "location":"Nauvoo",
+    "dedication":"05/01/1846"
+}
+
+### PUT temple
+PUT http://localhost:1001/temples/65b4f58e59aa3d206d8b651f HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Nauvoo Temple",
+    "status": "Destroyed",
+    "location": "Nauvo",
+    "dedication": "05/01/1846"  
+}
+
+### DELETE temple
+DELETE http://localhost:1001/temples/65b4f58e59aa3d206d8b651f HTTP/1.1
+
+
+### Get all Presidents
+GET http://localhost:1001/presidents
+
+
+### Get President by id
+GET http://localhost:1001/president/65b4f41159aa3d206d8b651e
+
+
+### Create President
+POST http://localhost:1001/presidents HTTP/1.1
+content-type: application/json
+
+{
+    "birth":"any",
+    "placeOfBirth":"any",
+    "ordination":"any",
+    "death":"any",
+    "lenght": "any",
+    "firstName": "any",
+    "lastName": "any"
+
+}
+
+
+### PUT President
+PUT http://localhost:1001/presidents/65b4f41159aa3d206d8b651e HTTP/1.1
+content-type: application/json
+
+{
+   "birth":"any",
+    "placeOfBirth":"any",
+    "ordination":"any",
+    "death":"any",
+    "lenght": "any",
+    "firstName": "any",
+    "lastName": "any"
+}
+
+### DELETE temple
+DELETE http://localhost:1001/presidents/65bcdd2f8b350ba216a9e141 HTTP/1.1
+
+

@@ -1,7 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getAll = (req, res) => {
+const getAllTemples = (req, res) => {
   mongodb
     .getDb()
     .db()
@@ -17,7 +17,7 @@ const getAll = (req, res) => {
 };
 
 
-const getSingle = (req, res) => {
+const getSingleTemple = (req, res) => {
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid temple id to find a temple.');
   }
@@ -91,8 +91,8 @@ const deleteTemple = async (req, res) => {
 };
 
 module.exports = {
-  getAll,
-  getSingle,
+  getAllTemples,
+  getSingleTemple,
   createTemple,
   updateTemple,
   deleteTemple

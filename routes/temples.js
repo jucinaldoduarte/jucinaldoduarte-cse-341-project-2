@@ -2,16 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 const templesController = require('../controllers/temples');
-const validation = require('../middleware/validate');
 
-router.get('/', templesController.getAll);
+const { isAuthenticated } = require('../middleware/authenticate');
 
-router.get('/:id', templesController.getSingle);
+router.get('/', templesController.getAllTemples);
 
-router.post('/', validation.saveTemples, templesController.createTemple);
+router.get('/:id', templesController.getSingleTemple);
 
-router.put('/:id', validation.saveTemples, templesController.updateTemple);
+router.post('/', isAuthenticated, templesController.createTemple);
 
-router.delete('/:id', templesController.deleteTemple);
+router.put('/:id', isAuthenticated, templesController.updateTemple);
+
+router.delete('/:id', isAuthenticated, templesController.deleteTemple);
 
 module.exports = router;
